@@ -1,8 +1,15 @@
-@baseUrl = https://finalspaceapi.com/api/v0
+GET  https://finalspaceapi.com/api/v0
 
-# GET CHARACTERS
-GET {{baseUrl}}/character
+# # GET CHARACTERS
+# GET {{baseUrl}}/character
 
-###
-# GETS A SINGLE CHARACTER 
-GET {{baseUrl}}/character/1
+# ###
+# # GETS A SINGLE CHARACTER 
+# GET {{baseUrl}}/character/1
+
+
+# ###
+# # GET EPISODES
+# GET {{baseUrl}}/episode
+
+
