@@ -1,0 +1,8 @@
+@baseUrl = https://finalspaceapi.com/api/v0
+
+# GET CHARACTERS
+GET {{baseUrl}}/character
+
+###
+# GETS A SINGLE CHARACTER 
+GET {{baseUrl}}/character/1
