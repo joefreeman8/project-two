@@ -1,5 +1,7 @@
 GET  https://finalspaceapi.com/api/v0
 
+
+
 # # GET CHARACTERS
 # GET {{baseUrl}}/character
 
@@ -8,8 +10,8 @@ GET  https://finalspaceapi.com/api/v0
 # GET {{baseUrl}}/character/1
 
 
-# ###
-# # GET EPISODES
-# GET {{baseUrl}}/episode
+###
+# GET EPISODES
+GET  https://finalspaceapi.com/api/v0/episode
 
 

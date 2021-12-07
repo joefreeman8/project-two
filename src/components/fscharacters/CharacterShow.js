@@ -1,6 +1,7 @@
 import React from 'react'
 import { useParams } from 'react-router'
 import axios from 'axios'
+import { createNotification } from '../lib/notification'
 
 function CharacterShow() {
   const [character, setCharacter] = React.useState(null)
@@ -8,13 +9,24 @@ function CharacterShow() {
 
   React.useEffect(() => {
     const getData = async () => {
-      const res = await axios.get(`https://finalspaceapi.com/api/v0/character/${characterId}`)
-      setCharacter(res.data)
+      try {
+        const characterRes = await axios.get(`https://finalspaceapi.com/api/v0/character/${characterId}`)
+        setCharacter(characterRes.data)
+        const quoteRes = await axios.get('https://finalspaceapi.com/api/v0/quote')
+        const quotesArray = quoteRes.data.filter(quote => {
+          if (quote.by === characterRes.data.name) {
+            return quote
+          }
+        })
+        createNotification(quotesArray[Math.floor(Math.random() * quotesArray.length)].quote)
+      } catch (err) {
+        console.log(err)
+      }
     }
     getData()
   }, [characterId])
 
-  console.log(character)
+
 
   return (
     <section className="section">
@@ -48,7 +60,7 @@ function CharacterShow() {
                 <hr />
                 <h4 className="title is-4">
                   <span role="img" aria-label="lightning">
-                  ⚡︎
+                    ⚡︎
                   </span>{' '}
                   Abilities
                 </h4>
@@ -56,7 +68,7 @@ function CharacterShow() {
                 <hr />
                 <h4 className="title is-4">
                   <span role="img" aria-label="alias">
-                  @
+                    @
                   </span>{' '}
                   Alias
                 </h4>
@@ -64,7 +76,6 @@ function CharacterShow() {
               </div>
             </div>
             <hr />
-            <p>hello</p>
           </div>
           :
           <p>...is loading</p>

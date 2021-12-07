@@ -1,1 +1,29 @@
+$is-dark: #363636;
+
+$card-header-background-color: $is-dark;
+$card-content-background-color: $is-dark;
+$input-border-color: $is-dark;
+// $section-hero-is-fullheight-with-navbar: 
+
+h3.card-header-title {
+  color: white;
+}
+
+h4.card-header-title {
+  color: white;
+}
+
+input.field-input-is-normal {
+  border: 3px solid $is-dark;
+}
+
+.background {
+  background-image: url('https://i.pinimg.com/originals/bf/fe/de/bffede1d81ebe6ddb2eb3033dc86ac68.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 @import '~bulma/bulma.sass';
+
+

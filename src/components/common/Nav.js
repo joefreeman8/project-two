@@ -15,9 +15,6 @@ function Nav() {
           <Link to="/episode" className="navbar-item">
             Episode Index
           </Link>
-          <Link to="/quote" className="navbar-item">
-            Quote Game
-          </Link>
         </div>
       </div>
     </nav>
