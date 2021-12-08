@@ -1,21 +1,24 @@
 import React from 'react'
-// import { getAllCharacters } from '../lib/api'
-import axios from 'axios'
 import CharacterCard from './CharacterCard'
+import { getAllCharacters } from '../../lib/api'
+import Error from '../common/Error'
+import Loading from '../common/Loading'
 
 
 function CharacterIndex() {
 
   const [characters, setCharacters] = React.useState(null)
   const [searchValue, setSearchValue] = React.useState('')
+  const [isError, setIsError] = React.useState(false)
+  const isLoading = !characters && !isError
 
   React.useEffect(() => {
     const getData = async () => {
       try {
-        const res = await axios.get('https://finalspaceapi.com/api/v0/character')
+        const res = await getAllCharacters()
         setCharacters(res.data)
       } catch (err) {
-        console.log(err)
+        setIsError(true)
       }
     }
     getData()
@@ -45,7 +48,9 @@ function CharacterIndex() {
 
       <div className="container">
         <div className="columns is-multiline">
-          {characters ?
+          {isError && <Error />}
+          {isLoading && <Loading />}
+          {characters &&
             filterCharacters(characters).map(character => (
               <CharacterCard
                 key={character.id}
@@ -57,10 +62,7 @@ function CharacterIndex() {
                 abilities={character.abilities}
                 characterId={character.id}
               />
-            ))
-            :
-            <p>...is loading</p>
-          }
+            ))}
         </div>
       </div>
     </section>

@@ -16,9 +16,9 @@ function EpisodeCard({ episodeId, name, image, director, writer }) {
           <a href={episode[episodeId]} target="_blank" rel="noreferrer"><img src={image} alt={name} /></a>
         </figure>
       </div>
-      <div className="card-content">
-        <h5>Writer: {writer}</h5>
-        <h5>Director: {director}</h5>
+      <div className="main-cards">
+        <h5 className="episode-writer">Writer: {writer}</h5>
+        <h5 className="episode-director">Director: {director}</h5>
       </div>
     </div>
   )

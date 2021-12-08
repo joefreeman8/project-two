@@ -1,15 +1,21 @@
-import Axios from 'axios'
+import axios from 'axios'
 
 const baseUrl = 'https://finalspaceapi.com/api/v0'
 
 export function getAllCharacters () {
-  return Axios.get(`${baseUrl}/character`)
+  return axios.get(`${baseUrl}/character`)
 }
 
-export function getSingleCharacter () {
-  return Axios.get(`${baseUrl}/character/id`)
+export function getSingleCharacter (characterId) {
+  return axios.get(`${baseUrl}/character/${characterId}`)
+}
+
+
+export function getAllQuotes () {
+  return axios.get(`${baseUrl}/quote`)
 }
 
 export function getAllEpisodes () {
-  return Axios.get(`${baseUrl}/episode`)
+  return axios.get(`${baseUrl}/episode`)
 }
+
