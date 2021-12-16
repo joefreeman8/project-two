@@ -2,7 +2,7 @@ import React from 'react'
 import { useParams } from 'react-router'
 import { createNotification } from '../../lib/notification.js'
 import { getAllQuotes, getSingleCharacter } from '../../lib/api.js'
-import Error from '../common/Error'
+// import Error from '../common/Error'
 import Loading from '../common/Loading'
 
 
@@ -38,7 +38,7 @@ function CharacterShow() {
       <div className="columns">
         <div className="wholecard column is-half is-offset-one-quarter">
           <div className="container">
-            {isError && <Error />}
+            {/* {isError && <Error />} */}
             {isLoading && <Loading />}
             {character &&
               <div className="card-info">
