@@ -1,4 +1,4 @@
-# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) SOFTWARE ENGINEER IMMERSIVE - PROJECT TWO
+## SOFTWARE ENGINEERING IMMERSIVE - PROJECT TWO ##
 
 A hackathon style project done in pairs within 48hours.
 
@@ -141,7 +141,7 @@ export function createNotification(message) {
 ## Episode Index ##
 The Episode index is made the same way as our Character Index, however here we opted for a filter option instead of a search bar. This enables the user to choose which season they would like to view.
  ![episodefilter](/src/assets/episodefilter.gif)
- 
+
 We added a filteredEpisodes function and added a drop down list in the JSX.
 ```js
  const handleSelect = (e) => {
