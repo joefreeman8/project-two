@@ -1,4 +1,4 @@
-## SOFTWARE ENGINEERING IMMERSIVE - PROJECT TWO ##
+# SOFTWARE ENGINEERING IMMERSIVE - PROJECT TWO #
 
 A hackathon style project done in pairs within 48hours.
 
