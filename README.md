@@ -3,7 +3,7 @@
 A hackathon style project done in pairs within 48hours.
 
 ### Collaborator ###
-Aromi Afolabi - githublink
+[Aromi Afolabi](https://github.com/aromiafolabi "Aromi Afolabi") 
 
 ## Final-Space ##
 This was a 48hour hackathon challenge in which we worked in pairs to build a React app which used a public API. 
@@ -232,10 +232,28 @@ export default Error
 ```
 
 Both the error and loading components are set in state. This makes it impossible for the user to see more than one state at any one time.
+```js
+ <div className="columns is-multiline">
+   {isError && <Error />}
+   {isLoading && <Loading />}
+   {characters &&
+     filterCharacters(characters).map(character => (
+       <CharacterCard ...
+```
 
-       <div className="columns is-multiline">
-         {isError && <Error />}
-         {isLoading && <Loading />}
-         {characters &&
-           filterCharacters(characters).map(character => (
-             <CharacterCard
+## Challenges ##
+* One of the biggest challenges we faced on this hackathon was with filtering the episodes. The difficulty stemmed from the data provided in the API and how we could pick a part of it which would be unique for our filtering, i.e. the year of release, rather than the full date. We managed to get around this by setting the selected season in state and checking if it includes the same value. 
+* Another challenge arose when we were trying to work out how to retrieve all the quotes but then only display one quote at a time, randomised, on a toast notification. A bit of trial and error and a sprinkling of Google helped us navigate our way to success on this one.
+
+## Bugs ##
+* The only known bug at this stage is located within the character show page. We found out moments before the hackathon deadline that our error handler would kick up an error on this page if the character did not have any quotes to retrieve from the API. This problem only occurs on the characters which play lesser roles in Final Space which I assume do not have many lines in the show! Due to this being discovered moments before the deadline we opted to turn the error handler off on this page. 
+
+## Future Improvements ##
+* Bug fixes.
+* Work a little more on the CSS, jazz things up some more.
+* Create another page for a game, to add engagement, something like a pair game where you have to match the tiles could have been a nice addition.
+
+## Wins & Key Learnings
+* The project was invaluable in terms of working as a pair and learning how other people approach code.
+* The improvement in understanding setting data ‘in state’ and navigating APIs.
+* Recognising that console.log() is your best friend.
