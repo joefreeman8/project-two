@@ -141,6 +141,7 @@ export function createNotification(message) {
 ## Episode Index ##
 The Episode index is made the same way as our Character Index, however here we opted for a filter option instead of a search bar. This enables the user to choose which season they would like to view.
  ![episodefilter](/src/assets/episodefilter.gif)
+ 
 We added a filteredEpisodes function and added a drop down list in the JSX.
 ```js
  const handleSelect = (e) => {
