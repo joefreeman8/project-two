@@ -66,6 +66,7 @@ We began coding the frame of the site by creating the basic components and Brows
 
 ## Homepage ##
 The homepage is a simple landing page with a twinkling background with a title and nav bar positioned at the top.
+
 ![homepage](/src/assets/homepage.png)
 
 ## Character Index ##
