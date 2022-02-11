@@ -85,7 +85,8 @@ Once landing at the Character Index page an async function will run. This code b
  }, [])
 ```
 
-We were then able to use the data drawn from this API to create Character Cards which are displayed on this index page. 
+We were then able to use the data drawn from this API to create Character Cards which are displayed on this index page.
+
 ![characterindex](/src/assets/characterindex.png)
 
 ## Search Function ##
@@ -101,6 +102,7 @@ One of the must have features for us on this project was to have a search functi
 
  ## Character Show ##
 The Character Show page is accessed by clicking one of the Character Cards on the Character Index page. This page is made by increasing the size of the character card and adding more information about the selected character. We found that some characters had many different special abilities and aliases, as such we decided to use Math.random to randomly provide a new result from the data each time the card is opened or page is re-rendered.
+
  ![showpage](/src/assets/showpage.gif)
 
  We also took the opportunity to request more information from the API site as we included ‘quotes’ from the characters. 
@@ -140,6 +142,7 @@ export function createNotification(message) {
 
 ## Episode Index ##
 The Episode index is made the same way as our Character Index, however here we opted for a filter option instead of a search bar. This enables the user to choose which season they would like to view.
+
  ![episodefilter](/src/assets/episodefilter.gif)
 
 We added a filteredEpisodes function and added a drop down list in the JSX.
@@ -254,7 +257,7 @@ Both the error and loading components are set in state. This makes it impossible
 * Work a little more on the CSS, jazz things up some more.
 * Create another page for a game, to add engagement, something like a pair game where you have to match the tiles could have been a nice addition.
 
-## Wins & Key Learnings
+## Wins & Key Learnings ##
 * The project was invaluable in terms of working as a pair and learning how other people approach code.
 * The improvement in understanding setting data ‘in state’ and navigating APIs.
 * Recognising that console.log() is your best friend.
